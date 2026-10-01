@@ -1,0 +1,36 @@
+name: Test Homebrew Installation
+
+# Allows you to run this workflow manually from the Actions tab
+on:
+  workflow_dispatch:
+
+jobs:
+  test-cask:
+    runs-on: macos-15 # Using the current up-to-date macOS runner
+    
+    steps:
+      - name: Checkout Tap Repository
+        uses: actions/checkout@v4
+
+      - name: Run Brew Diagnostics
+        run: |
+          brew --version
+          
+      - name: Tap and Install IMSProg Cask
+        run: |
+          # 1. Tap the local repository path since the runner is executing inside it
+          brew tap bigbigmdm/imsprog .
+          
+          # 2. Trigger the test installation of the cask package
+          brew install --cask imsprog
+
+      - name: Verify Application Layout
+        run: |
+          echo "Checking if all components are placed in /Applications..."
+          
+          # Physically verify that all three compiled .app bundles exist in the target directory
+          if [ -d "/Applications/IMSProg.app" ]; then echo "✅ Main Programmer found!"; else echo "❌ Main Programmer MISSING"; exit 1; fi
+          if [ -d "/Applications/IMSProg_editor.app" ]; then echo "✅ Editor found!"; else echo "❌ Editor MISSING"; exit 1; fi
+          if [ -d "/Applications/IMSProg_database_update.app" ]; then echo "✅ Database Updater found!"; else echo "❌ Database Updater MISSING"; exit 1; fi
+          
+          echo "All three components are successfully verified in macOS filesystem structure."
