@@ -11,6 +11,8 @@ sha256 "a1a7b2873b10bd10a1a80dab43063811e6ae56bf75864f148f3553a71281611a"
   container nested: "imsprog-macos-arm64.dmg"
   
   app "IMSProg.app"
+  app "IMSProg_editor.app"
+  app "IMSProg_database_update.app"
 
   zap trash: [
     "~/.config/IMSProg",
