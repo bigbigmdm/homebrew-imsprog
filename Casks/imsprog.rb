@@ -6,7 +6,6 @@ sha256 "a1a7b2873b10bd10a1a80dab43063811e6ae56bf75864f148f3553a71281611a"
   name "IMSProg"
   desc "Linux/cross-platform GUI utility for SPI Flash, EEPROM, and FeRAM"
   homepage "https://github.com/bigbigmdm/IMSProg"
-  license "GPL-3.0-or-later"
 
   container nested: "imsprog-macos-arm64.dmg"
   
