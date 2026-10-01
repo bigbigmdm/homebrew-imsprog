@@ -20,8 +20,11 @@ jobs:
         run: |
           # 1. Tap the local repository path since the runner is executing inside it
           brew tap bigbigmdm/imsprog .
+
+          # 2. Tell Homebrew to explicitly trust this new custom repository
+          brew trust bigbigmdm/imsprog
           
-          # 2. Trigger the test installation of the cask package
+          # 3. Trigger the test installation of the cask package
           brew install --cask imsprog
 
       - name: Verify Application Layout
