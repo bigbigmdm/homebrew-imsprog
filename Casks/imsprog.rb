@@ -1,6 +1,6 @@
 cask "imsprog" do
   version "1.9.1"
-sha256 "sha256:acca1d6ce5a19abe4cfb9c32654e5fb5e1b9457d075d012d9bc540f583932fd3"
+  sha256 "acca1d6ce5a19abe4cfb9c32654e5fb5e1b9457d075d012d9bc540f583932fd3"
 
   url "https://github.com/bigbigmdm/IMSProg/releases/download/v#{version}/macos-arm64-dmg.zip"
   name "IMSProg"
@@ -14,7 +14,7 @@ sha256 "sha256:acca1d6ce5a19abe4cfb9c32654e5fb5e1b9457d075d012d9bc540f583932fd3"
   app "IMSProg_database_update.app"
 
   zap trash: [
-    "~/.config/IMSProg",
+    "~/.config/imsprog",
     "~/Library/Preferences/com.imsprog.plist",
   ]
 end
