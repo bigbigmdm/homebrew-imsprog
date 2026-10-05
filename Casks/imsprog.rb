@@ -1,6 +1,6 @@
 cask "imsprog" do
   version "1.9.1"
-  sha256 "9b39b097712442408c887a961823238f4e89a081a107a2bc8e674114949b6715"
+  sha256 "d881dd6b5e404acf43d6d0a9564e61510d2f7e9d71f5581fb2e54fc9443d83f0"
 
   url "https://github.com/bigbigmdm/IMSProg/releases/download/v#{version}/macos-arm64-dmg.zip"
   name "IMSProg"
