@@ -15,5 +15,5 @@ cask "imsprog" do
   app "IMSProg_editor.app"
   app "IMSProg_database_update.app"
 
-  # No zap stanza required
+  zap :not_required
 end
