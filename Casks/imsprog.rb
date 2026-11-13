@@ -1,8 +1,8 @@
 cask "imsprog" do
-  version "1.9.1"
-  sha256 "e3f229fa6fb540bbca22a4c9ca4ea43c2a74964bb503c06832a36334863b31ad"
+  version "1.9.2"
+  sha256 "f4e74a9795d43125f8460d8d8375c271512c74b2486259300a0af4c41767a634"
 
-  url "https://github.com/bigbigmdm/IMSProg/releases/download/v#{version}/macos-arm64-dmg.zip"
+  url "https://github.com/bigbigmdm/IMSProg/releases/download/v#{version}/imsprog-macos-arm64.dmg"
   name "IMSProg"
   desc "GUI utility for SPI Flash, EEPROM, and FeRAM"
   homepage "https://github.com/bigbigmdm/IMSProg"
